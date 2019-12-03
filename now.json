@@ -1,0 +1,31 @@
+{
+    "version": 2,
+    "builds": [
+        { 
+            "src": "index.js", 
+            "use": "@now/node-server" 
+        }
+    ],
+    "routes": [
+        {
+          "src": "/plans",
+          "dest": "/index.js",
+          "methods": ["GET"]
+        },
+        {
+            "src": "/gallery",
+            "dest": "/index.js",
+            "methods": ["GET"]
+        },
+        {
+            "src": "/amenities",
+            "dest": "/index.js",
+            "methods": ["GET"]
+        },
+        {
+            "src": "/contact",
+            "dest": "/index.js",
+            "methods": ["GET"]
+        }
+      ]
+  }
