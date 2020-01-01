@@ -316,32 +316,5 @@
     <script src="assets/js/scroll.js"></script>
 
     <button onclick="topFunction()" id="myBtn" title="Go to top"><i class="icon fas fa-arrow-circle-up fa-lg"></i></button>
-
-    <script>
-        $(document).ready(function() {
-                var weatherApiKey = "b4cc4db939918082b6423005a49fcae8";
-                var img = document.getElementById("cloudIcon");
-    
-                var weatherApiCall = "https://api.darksky.net/forecast/"+weatherApiKey+"/42.957826,-85.913919";
-                
-                try{
-                    $.ajax({
-                    url: weatherApiCall,
-                    type: "GET",
-                    dataType: "jsonp",
-                    success: function(weatherData) {
-                        $(".currentTemp").html("Allendale, MI- " + weatherData.currently.temperature + " °F");
-                    }
-                });
-                }
-                catch{
-                    $(".currentTemp").html('Allendale, MI');
-                    img.hidden = true;
-                }
-            });
-        </script>
-
-
 </body>
-
 </html>
